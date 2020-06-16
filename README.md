@@ -10,3 +10,46 @@ We're open to ideas on how to do this and are looking for help from anybody who 
 Wether or not you have skills to contribute to the coding, if you are familiar with MRI data acquisition and how it can go wrong we really want your help!  We need to know where a graphical user interface can do some good.  If you've got graphic design and technical writing skills, please help by working on a project logo, creating artwork for the GUI, and adding documentation.
 
 This project is part of [OHBM Brainhack 2020](https://ohbm.github.io/hackathon2020/)
+
+
+Build Docker images with Python and JavaScript dev/test requirements installed.
+
+```bash
+make jsdev-image
+make pydev-image
+```
+
+Set the Parcel builder to watch for JavaScript code changes and compile a dev
+`index.js`. Run a Flask server that loads the `index.js` and autoreloads on
+Python changes.
+
+```
+# In two separate terminals ...
+make parcel
+make flask
+```
+
+Run pytest unit tests. Watch JavaScript files and run Jest tests.
+
+```bash
+make pytest
+make jstest-watch
+```
+
+Build a local production image with Gunicorn and minified JS. Scale three
+instances of the web app using Docker Compose.
+
+```bash
+make stack
+make unstack
+```
+
+Deploy to a Docker service provider (e.g., ZEIT).
+
+```bash
+now --docker --public
+now ls
+now scale <url> 0 3
+```
+
+Flask-react generated from https://github.com/parente/cookiecutter-flask-react template

@@ -1,0 +1,19 @@
+---
+version: "3.3"
+
+services:
+  web:
+    image: parente/bids_curation_gui
+    ports:
+      - "8080:8080"
+    command: gunicorn -b 0.0.0.0:8080 --access-logfile - -w 1 bids_curation_gui:app
+    deploy:
+      replicas: 3
+    secrets:
+      - secret_key
+    environment:
+      SECRET_KEY_FILE: /run/secrets/secret_key
+
+secrets:
+  secret_key:
+    file: ./etc/dev-flask-secret-key
