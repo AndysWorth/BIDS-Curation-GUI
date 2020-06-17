@@ -14,7 +14,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      dicomInfo: '',
+      dicomInfo: [],
       selectedRows: []
     }
   }
@@ -57,7 +57,7 @@ class App extends React.Component {
     return (
       <div className="App container">
         <h1 className="display-4">BIDS Curation GUI</h1>
-        <DicomInfoOutput value={this.state.dicomInfo} columns={this.state.columns} onChange={this.dicomSelect.bind(this)}/>
+        <DicomInfoOutput dicomInfoRows={this.state.dicomInfo} columns={this.state.columns} onChange={this.dicomSelect.bind(this)}/>
       </div>
     )
   }
