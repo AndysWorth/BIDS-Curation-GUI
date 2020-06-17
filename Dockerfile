@@ -1,4 +1,4 @@
-FROM python:3-alpine as base
+FROM python:3-buster as base
 
 # Make application directory
 RUN mkdir -p /usr/src/app
@@ -18,7 +18,7 @@ RUN pip install --no-cache -r /usr/src/app/requirements-test.txt
 
 ############# JavaScript development build stage
 
-FROM node:12-alpine as jsdev
+FROM node:12-buster as jsdev
 
 # Make application directory (for consistency)
 RUN mkdir -p /usr/src/app

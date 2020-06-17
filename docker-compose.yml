@@ -1,19 +1,26 @@
----
-version: "3.3"
+version: "3.4"
 
 services:
   web:
-    image: parente/bids_curation_gui
+    build:
+      context: .
+      target: pydev
+    image: "${IMAGE}:pydev"
     ports:
-      - "8080:8080"
-    command: gunicorn -b 0.0.0.0:8080 --access-logfile - -w 1 bids_curation_gui:app
-    deploy:
-      replicas: 3
-    secrets:
-      - secret_key
-    environment:
-      SECRET_KEY_FILE: /run/secrets/secret_key
+      - "5000:5000"
+    command: flask run -h 0.0.0.0
+    volumes:
+      - ./:/usr/src/app
+    env_file: .env
 
-secrets:
-  secret_key:
-    file: ./etc/dev-flask-secret-key
+  front_end:
+    build:
+      context: .
+      target: jsdev
+    image: "${IMAGE}:jsdev"
+    ports:
+      - "5001:5001"
+    command: npm run watch -- --hmr-port 5001
+    volumes:
+      - "./${FLASK_APP}/static:/usr/src/app/${FLASK_APP}/static"
+    env_file: .env

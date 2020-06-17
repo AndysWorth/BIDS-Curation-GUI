@@ -1,7 +1,7 @@
 # Application module name
 APP_NAME:=bids_curation_gui
 # Docker image name and tag
-IMAGE:=parente/bids_curation_gui
+IMAGE:=bids_curation_gui
 TAG?=latest
 # Shell that make should use
 SHELL:=bash
