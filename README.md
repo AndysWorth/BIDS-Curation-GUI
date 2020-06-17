@@ -7,7 +7,7 @@ Getting data into the [Brain Imaging Data Structure (BIDS)](https://bids.neuroim
 
 We're open to ideas on how to do this and are looking for help from anybody who wants to contribute.  The initial plan is to create a basic GUI using [React](https://reactjs.org/) and to base this project on [ReproIn](https://github.com/ReproNim/reproin#reproin), [HeuDiConv](https://github.com/nipy/heudiconv#heudiconv), and the [BIDS-Validator](https://github.com/bids-standard/bids-validator#bids-validator).  There will be instructions here on how to download an example data set to get started.
 
-Wether or not you have skills to contribute to the coding, if you are familiar with MRI data acquisition and how it can go wrong we really want your help!  We need to know where a graphical user interface can do some good.  If you've got graphic design and technical writing skills, please help by working on a project logo, creating artwork for the GUI, and adding documentation.
+Whether or not you have skills to contribute to the coding, if you are familiar with MRI data acquisition and how it can go wrong we really want your help!  We need to know where a graphical user interface can do some good.  If you've got graphic design and technical writing skills, please help by working on a project logo, creating artwork for the GUI, and adding documentation.
 
 This project is part of [OHBM Brainhack 2020](https://ohbm.github.io/hackathon2020/)
 
