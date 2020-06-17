@@ -45,6 +45,7 @@ class App extends React.Component {
   }
   
   dicomSelect(tableState) {
+    console.log('Selected Rows: ' + tableState.selectedRows);
     this.setState({'selectedRows': tableState.selectedRows});
   }
 
@@ -53,7 +54,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="App container">
         <h1 className="display-4">BIDS Curation GUI</h1>
