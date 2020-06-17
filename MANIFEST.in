@@ -1,0 +1,2 @@
+include versioneer.py
+include bids_curation_gui/_version.py

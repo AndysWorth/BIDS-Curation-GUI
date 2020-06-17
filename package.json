@@ -1,0 +1,31 @@
+{
+  "name": "bids_curation_gui",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "parcel build bids_curation_gui/static/index.js -d bids_curation_gui/static/dist",
+    "watch": "parcel watch bids_curation_gui/static/index.js -d bids_curation_gui/static/dist",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.0",
+    "jest": "^26.0.1",
+    "parcel-bundler": "^1.0.1",
+    "react-test-renderer": "^16.5.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>setupTests.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
