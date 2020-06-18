@@ -2,7 +2,7 @@ import datetime
 import json
 import os
 
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 
 blueprint = Blueprint('api', __name__)
 
@@ -39,3 +39,8 @@ def handle_api_error(error):
 @blueprint.route('/api/echo/<value>', methods=['GET'])
 def echo(value):
     return jsonify({'value': value})
+
+@blueprint.route('/api/submit', methods=['POST'])
+def submit():
+    print(request.get_json())
+    return request.get_json()
