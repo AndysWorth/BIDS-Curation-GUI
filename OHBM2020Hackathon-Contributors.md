@@ -6,4 +6,4 @@ Thanks to all who contributed to this project during the Hackathon!
 
 **Matthew Cieslak** and **Tinashe Tapera** from the Brain & Behavior Laboratory at the University of Pennsylvania
 
-**Maggie Mahon** and **Andy Worth** from the Scientific Solutions team at [Flywheel](https://flywheel.io/)
+**Maggie Mahan** and **Andy Worth** from the Scientific Solutions team at [Flywheel](https://flywheel.io/)
