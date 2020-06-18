@@ -10,3 +10,11 @@ export const tsvJSON = (tsv) => {
   });
 };
 
+export const bidsTypes = {
+  "anat": ['T1w', 'T2w', 'T1rho', 'T1map', 'T2map', 'T2star', 'FLAIR',
+           'FLASH', 'PD', 'PDmap', 'PDT2', 'inplaneT1', 'inplaneT2',
+           'angio'],
+  "func": ['bold', 'sbref'],
+  "dwi": ['dwi', 'sbref'],
+  "fmap": ['phasediff', 'magnitude', 'fieldmap', 'epi', 'sbref']
+};
