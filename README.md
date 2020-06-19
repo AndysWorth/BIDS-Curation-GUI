@@ -29,6 +29,8 @@ make parcel
 make flask
 ```
 
+Or, run using `./run.py inputdir outputdir` which will do both of those `make` commands and pass in an input and output directory as environment variabels.  Use `./stop.py` to shut down the docker containers.
+
 Run pytest unit tests. Watch JavaScript files and run Jest tests.
 
 ```bash

@@ -1,8 +1,10 @@
 import datetime
 import json
 import os
+import sys
 
 from flask import Blueprint, jsonify, request
+
 
 blueprint = Blueprint('api', __name__)
 
@@ -42,5 +44,9 @@ def echo(value):
 
 @blueprint.route('/api/submit', methods=['POST'])
 def submit():
-    print(request.get_json())
+    msg = f"Input directory: {os.environ['INPUT']}\n"
+    msg += f"Output directory: {os.environ['OUTPUT']}\n"
+    print(msg)
+    sys.stdout.flush()
+    #print(request.get_json())
     return request.get_json()
