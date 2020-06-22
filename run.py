@@ -43,9 +43,12 @@ def main():
           f"-e INPUT={args.input} " + \
           f"-e OUTPUT={args.output} " + \
           f"-v {cwd}:/usr/src/app " + \
+          f"-v {args.input}:/input " + \
+          f"-v {args.output}:/output " + \
           "-p 5000:5000 " + \
+          "--entrypoint=flask " + \
           f"{IMAGE}:pydev " + \
-          "flask run -h 0.0.0.0 "
+          "run -h 0.0.0.0 "
     cmds.append(cmd)
 
     for cmd in cmds:

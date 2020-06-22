@@ -1,4 +1,4 @@
-FROM python:3-buster as base
+FROM nipy/heudiconv as base
 
 # Make application directory
 RUN mkdir -p /usr/src/app
@@ -15,6 +15,10 @@ FROM base as pydev
 # Add Python development requirements
 COPY requirements-test.txt /usr/src/app/
 RUN pip install --no-cache -r /usr/src/app/requirements-test.txt
+
+COPY PHANTOM1_3.tgz /
+RUN cd / && mkdir examples && cd examples && \
+    tar zxf ../PHANTOM1_3.tgz && rm ../PHANTOM1_3.tgz
 
 ############# JavaScript development build stage
 
